@@ -18,6 +18,10 @@ namespace ContactAddressBookSystem
             //Call func to edit contact name
             string str = "Saddam";
             Person.enditContactName(str);
+            //Delete a contact addr from addr book
+            //Delete a contact addr from addr book
+            string deleteContact = "SDMKHAN";
+            Person.Delete(deleteContact);
             //print presnt contact in addr book
             Person.printList();
         }

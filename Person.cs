@@ -67,6 +67,22 @@ namespace ContactAddressBookSystem
             personList[ind] = newUp;
         }
 
+
+        static public void Delete(string deleteContact)
+        {
+            int ind = -1;
+            for (int i = 0; i < personList.Count; i++)
+            {
+                if (personList[i].name == deleteContact)
+                {
+                    ind = i;
+                }
+            }
+            if (ind > -1)
+            {
+                personList.RemoveAt(ind);
+            }
+        }
         //print the present contacts in addr book
         public static void printList()
         {
