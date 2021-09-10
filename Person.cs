@@ -6,13 +6,14 @@ namespace ContactAddressBookSystem
 {
     public class Person
     {
+        //declare member data
         private string name;
         private string address;
         private string city;
         private string state;
         private string zipCode;
         private string phoneNum;
-
+        //paramerized constructor to define member data
         public Person(string name, string address, string city, string state, string zipCode, string phoneNum)
         {
             this.name = name;
@@ -22,7 +23,9 @@ namespace ContactAddressBookSystem
             this.zipCode = zipCode;
             this.phoneNum = phoneNum;
         }
+        //creats the list which store the data of type class Person
         private static List<Person> personList = new List<Person>();
+        //add contacts in empty add book of type list
         public static void addList(int n)
         {
             for (int i = 0; i < n; i++)
@@ -43,6 +46,13 @@ namespace ContactAddressBookSystem
                 personList.Add(addressList);
             }
         }
+        // adding new contact to addr book
+        public static void addNewContact(string name, string address, string city, string state, string zipCode, string phoneNum)
+        {
+            Person addressList = new Person(name, address, city, state, zipCode, phoneNum);
+            personList.Add(addressList);
+        }
+        //print the present contacts in addr book
         public static void printList()
         {
             for (int i = 0; i < personList.Count; i++)
