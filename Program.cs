@@ -15,6 +15,9 @@ namespace ContactAddressBookSystem
             Person.addList(n);
             //add new contact to addresss book
             Person.addNewContact("name", "address", "city", "state", "zipCode", "phoneNum");
+            //Call func to edit contact name
+            string str = "Saddam";
+            Person.enditContactName(str);
             //print presnt contact in addr book
             Person.printList();
         }

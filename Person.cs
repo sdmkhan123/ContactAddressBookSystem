@@ -52,6 +52,21 @@ namespace ContactAddressBookSystem
             Person addressList = new Person(name, address, city, state, zipCode, phoneNum);
             personList.Add(addressList);
         }
+        static public void enditContactName(string changeNaame)
+        {
+            int ind = -1;
+            for (int i = 0; i < personList.Count; i++)
+            {
+                if (personList[i].name == changeNaame)
+                {
+                    ind = i;
+                }
+            }
+            Person newUp = personList[ind];
+            newUp.name = "SDMKHAN";
+            personList[ind] = newUp;
+        }
+
         //print the present contacts in addr book
         public static void printList()
         {
