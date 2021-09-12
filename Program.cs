@@ -22,9 +22,18 @@ namespace ContactAddressBookSystem
                 {
                     case 1:
                         //create initial addr book with some contact addr
-                        Person.addList();
+                            Person.addList();
                         break;
                     case 2:
+                        //add multiple person to addr book one by one with some contact addr
+                        Console.WriteLine("Enter multple Person to be added with one by one ");
+                        int multiplePerson = Convert.ToInt32(Console.ReadLine());
+                        for (int i = 0; i < multiplePerson; i++)
+                        {
+                            Person.addList();
+                        }
+                        break;
+                    case 3:
                         //Call func to edit contact name
                         Console.WriteLine("with what you replace it ");
                         string changeName = Console.ReadLine();
@@ -32,12 +41,13 @@ namespace ContactAddressBookSystem
                         string name = Console.ReadLine();
                         Person.enditContactName(name, changeName);
                         break;
-                    case 3:
+                    case 4:
                         //Delete a contact addr from addr book
+                        Console.WriteLine("Enter the Contact name which you want to delete ");
                         string delName = Console.ReadLine();
                         Person.Delete(delName);
                         break;
-                    case 4:
+                    case 5:
                         //print presnt contact in addr book
                         Person.printList();
                         break;
