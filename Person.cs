@@ -26,10 +26,8 @@ namespace ContactAddressBookSystem
         //creats the list which store the data of type class Person
         private static List<Person> personList = new List<Person>();
         //add contacts in empty add book of type list
-        public static void addList(int n)
+        public static void addList()
         {
-            for (int i = 0; i < n; i++)
-            {
                 Console.WriteLine("enter name");
                 string name = Console.ReadLine();
                 Console.WriteLine("enter address");
@@ -44,26 +42,19 @@ namespace ContactAddressBookSystem
                 string phoneNum = Console.ReadLine();
                 Person addressList = new Person(name, address, city, state, zipCode, phoneNum);
                 personList.Add(addressList);
-            }
         }
-        // adding new contact to addr book
-        public static void addNewContact(string name, string address, string city, string state, string zipCode, string phoneNum)
-        {
-            Person addressList = new Person(name, address, city, state, zipCode, phoneNum);
-            personList.Add(addressList);
-        }
-        static public void enditContactName(string changeNaame)
+        static public void enditContactName(string Name, string changeNaame)
         {
             int ind = -1;
             for (int i = 0; i < personList.Count; i++)
             {
-                if (personList[i].name == changeNaame)
+                if (personList[i].name == Name)
                 {
                     ind = i;
                 }
             }
             Person newUp = personList[ind];
-            newUp.name = "SDMKHAN";
+            newUp.name = changeNaame;
             personList[ind] = newUp;
         }
 
