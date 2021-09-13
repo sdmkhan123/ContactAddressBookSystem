@@ -22,7 +22,7 @@ namespace ContactAddressBookSystem
                 {
                     case 1:
                         //create initial addr book with some contact addr
-                            Person.addList();
+                        Person.addList();
                         break;
                     case 2:
                         //add multiple person to addr book one by one with some contact addr
@@ -50,6 +50,11 @@ namespace ContactAddressBookSystem
                     case 5:
                         //print presnt contact in addr book
                         Person.printList();
+                        break;
+                    case 6:
+                        Console.WriteLine("enter name for that we find contact addr inside dict ");
+                        string dictName = Console.ReadLine();
+                        Person.printDictioanry(dictName);
                         break;
                     default:
                         Console.WriteLine("Please enter correct option");
