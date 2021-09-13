@@ -22,7 +22,7 @@ namespace ContactAddressBookSystem
                 {
                     case 1:
                         //create initial addr book with some contact addr
-                            Person.addList();
+                        Person.addList();
                         break;
                     case 2:
                         //add multiple person to addr book one by one with some contact addr
