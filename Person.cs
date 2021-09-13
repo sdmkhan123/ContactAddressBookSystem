@@ -25,10 +25,7 @@ namespace ContactAddressBookSystem
         }
         //creats the list which store the object of type class Person
         private static List<Person> personList = new List<Person>();
-<<<<<<< HEAD
-=======
         //creats the Dictionary which store the name and object of type class Person
->>>>>>> UcSix_addMultipleAddrBookUsingDictionary
         private static Dictionary<string, Person> addressBookMap = new Dictionary<string, Person>();
         //add contacts in empty add book of type list
         public static void addList()
