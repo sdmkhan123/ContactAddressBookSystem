@@ -51,6 +51,11 @@ namespace ContactAddressBookSystem
                         //print presnt contact in addr book
                         Person.printList();
                         break;
+                    case 6:
+                        Console.WriteLine("enter name for that we find contact addr inside dict ");
+                        string dictName = Console.ReadLine();
+                        Person.printDictioanry(dictName);
+                        break;
                     default:
                         Console.WriteLine("Please enter correct option");
                         break;
